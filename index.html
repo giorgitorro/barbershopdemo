@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Blackwood Barbers</title>
+<meta name="description" content="Blackwood Barbers — classic cuts, hot towel shaves and beard grooming. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+:root{color-scheme:dark;--bg:#0e0e0f;--card:#18181a;--line:#2a2a2d;--text:#f2efe9;--mute:#9a968d;--gold:#c8a35a;--gold2:#e6c987;--red:#a83232;--ok:#3f8f5a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.demo-bar{background:var(--gold);color:#111;text-align:center;font-size:12.5px;font-weight:600;padding:6px max(12px,env(safe-area-inset-right,0px)) 6px max(12px,env(safe-area-inset-left,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(14,14,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Playfair Display',serif;font-weight:800;letter-spacing:.14em;font-size:17px}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:20px;font-size:14px;color:var(--mute)}
+nav a:hover{color:var(--gold2)}
+@media(max-width:640px){nav a:not(.cta-s){display:none}}
+.btn{display:inline-block;background:var(--gold);color:#111;font-weight:600;border:0;border-radius:6px;padding:12px 22px;font-size:15px;cursor:pointer;transition:.15s}
+.btn:hover{background:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.hero{padding:84px 0 70px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2218 0%,var(--bg) 65%)}
+.hero small{letter-spacing:.3em;color:var(--gold);font-size:12px;text-transform:uppercase}
+.hero h1{font-size:clamp(38px,8vw,72px);line-height:1.08;margin:14px 0 16px;font-weight:800}
+.hero p{color:var(--mute);max-width:520px;margin:0 auto 28px}
+.hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+section{padding:64px 0}
+.sec-h{margin-bottom:28px}
+.sec-h small{color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-size:12px}
+.sec-h h2{font-size:clamp(28px,5vw,40px);margin-top:6px}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.loc h3{font-size:20px;margin-bottom:6px}
+.loc p{color:var(--mute);font-size:14px;margin-bottom:4px}
+.loc .hrs{color:var(--gold2)}
+.loc .btn{margin-top:14px;padding:9px 16px;font-size:14px}
+.price-list{max-width:720px}
+.price{display:flex;align-items:baseline;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}
+.price:first-child{border-top:1px solid var(--line)}
+.price .n{font-weight:600}
+.price .d{color:var(--mute);font-size:13px}
+.price .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.price .p{color:var(--gold2);font-weight:600;font-size:18px;white-space:nowrap}
+.price button{margin-left:6px;background:none;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer}
+.price button:hover{border-color:var(--gold);color:var(--gold2)}
+.barber{text-align:center}
+.avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:30px;font-weight:800;color:#111;background:linear-gradient(135deg,var(--gold2),var(--gold))}
+.barber h3{font-size:18px}
+.barber p{color:var(--mute);font-size:13px}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);color:var(--mute);border-radius:99px;padding:2px 9px;margin-top:8px}
+/* booking */
+.book{background:linear-gradient(180deg,var(--bg),#141416)}
+.steps{display:grid;gap:14px;max-width:760px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.step.locked{opacity:.4;pointer-events:none}
+.step h3{font-family:Inter,sans-serif;font-size:15px;font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.step h3 i{font-style:normal;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#111;font-size:12px}
+.step.done h3 i{background:var(--ok);color:#fff}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{background:#111113;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:10px 14px;font-size:14px;cursor:pointer;text-align:left}
+.opt small{display:block;color:var(--mute);font-size:12px}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{border-color:var(--gold);background:#241e12;color:var(--gold2)}
+.opt:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.day{min-width:62px;text-align:center;padding:10px 6px}
+.day b{display:block;font-size:18px}
+.day small{display:block}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin-top:14px}
+.slots .opt{text-align:center;padding:9px 4px}
+.form{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.form{grid-template-columns:1fr}}
+.form input,.form textarea{width:100%;background:#111113;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:11px 12px;font:inherit}
+.form input:focus,.form textarea:focus{outline:0;border-color:var(--gold)}
+.form .full{grid-column:1/-1}
+.summary{margin-top:14px;padding:14px;border:1px dashed var(--gold);border-radius:8px;color:var(--gold2);font-size:14px}
+.err{color:#e57373;font-size:13px;margin-top:8px;min-height:18px}
+.empty{color:var(--mute);font-size:14px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;place-items:center;z-index:50;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.modal.on{display:grid}
+.modal .box{background:var(--card);border:1px solid var(--gold);border-radius:12px;padding:28px;max-width:420px;width:100%;text-align:center}
+.modal .check{width:56px;height:56px;border-radius:50%;background:var(--ok);display:grid;place-items:center;margin:0 auto 14px;font-size:28px}
+.modal h3{font-size:24px;margin-bottom:6px}
+.modal .ref{font-family:monospace;color:var(--gold2);letter-spacing:.12em;margin:10px 0}
+.modal ul{list-style:none;text-align:left;margin:14px 0 20px;font-size:14px;color:var(--mute)}
+.modal li{padding:6px 0;border-bottom:1px solid var(--line)}
+.modal li b{color:var(--text);float:right;font-weight:500}
+.mine{margin-top:26px;max-width:760px}
+.mine h3{font-family:Inter,sans-serif;font-size:15px;margin-bottom:10px}
+.bk{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:8px;font-size:14px}
+.bk small{color:var(--mute);display:block}
+.bk button{background:none;border:1px solid var(--line);color:var(--mute);border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px}
+.bk button:hover{border-color:var(--red);color:#e57373}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:13px;text-align:center}
+</style>
+<div class="demo-bar">DEMO CONCEPT · Sample barbers, prices and addresses</div>
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">BLACKWOOD <span>BARBERS</span></a>
+    <nav>
+      <a href="#locations">Locations</a>
+      <a href="#services">Prices</a>
+      <a href="#barbers">Barbers</a>
+      <a href="#book" class="cta-s" style="color:var(--gold)">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <small>Tbilisi · Est. barbershop</small>
+    <h1>Sharp cuts.<br>Clean lines. Zero waiting.</h1>
+    <p>Pick your barber, choose a time that suits you and book in under a minute. No calls, no messages.</p>
+    <div class="row">
+      <a href="#book" class="btn">Book an appointment</a>
+      <a href="#services" class="btn ghost">See prices</a>
+    </div>
+  </div>
+</div>
+
+<section id="locations">
+  <div class="wrap">
+    <div class="sec-h"><small>Find us</small><h2>Locations</h2></div>
+    <div class="grid g3" id="locGrid"></div>
+  </div>
+</section>
+
+<section id="services" style="background:#111113">
+  <div class="wrap">
+    <div class="sec-h"><small>Menu</small><h2>Services &amp; prices</h2></div>
+    <div class="price-list" id="priceList"></div>
+  </div>
+</section>
+
+<section id="barbers">
+  <div class="wrap">
+    <div class="sec-h"><small>The team</small><h2>Our barbers</h2></div>
+    <div class="grid g3" id="barberGrid"></div>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <div class="sec-h"><small>Reserve</small><h2>Book your appointment</h2></div>
+    <div class="steps" id="steps">
+      <div class="step" id="s1"><h3><i>1</i>Choose location</h3><div class="opts" id="o1"></div></div>
+      <div class="step locked" id="s2"><h3><i>2</i>Choose service</h3><div class="opts" id="o2"></div></div>
+      <div class="step locked" id="s3"><h3><i>3</i>Choose barber</h3><div class="opts" id="o3"></div></div>
+      <div class="step locked" id="s4"><h3><i>4</i>Pick date &amp; time</h3>
+        <div class="days" id="days"></div>
+        <div class="slots" id="slots"></div>
+      </div>
+      <div class="step locked" id="s5"><h3><i>5</i>Your details</h3>
+        <div class="form">
+          <input id="fName" placeholder="Full name" autocomplete="name">
+          <input id="fPhone" placeholder="Phone (e.g. 5XX XX XX XX)" inputmode="tel" autocomplete="tel">
+          <textarea class="full" id="fNote" rows="2" placeholder="Note for the barber (optional)"></textarea>
+        </div>
+        <div class="summary" id="summary" style="display:none"></div>
+        <div class="err" id="err"></div>
+        <button class="btn" id="confirm" style="margin-top:8px" disabled>Confirm reservation</button>
+      </div>
+    </div>
+    <div class="mine" id="mine"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Demo website concept · All data shown is sample data</div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="box">
+    <div class="check">✓</div>
+    <h3>You're booked!</h3>
+    <div style="color:var(--mute);font-size:14px">A confirmation SMS would be sent in the real version.</div>
+    <div class="ref" id="mRef"></div>
+    <ul id="mList"></ul>
+    <button class="btn" onclick="closeModal()">Done</button>
+  </div>
+</div>
+
+<script>
+const LOCS=[
+ {id:'vake',name:'Vake',addr:'Sample address 12, Vake, Tbilisi',hours:'Daily 10:00 – 21:00',phone:'+995 5XX XX XX XX'},
+ {id:'saburtalo',name:'Saburtalo',addr:'Sample address 48, Saburtalo, Tbilisi',hours:'Daily 10:00 – 21:00',phone:'+995 5XX XX XX XX'},
+ {id:'old',name:'Old Tbilisi',addr:'Sample address 5, Sololaki, Tbilisi',hours:'Daily 11:00 – 22:00',phone:'+995 5XX XX XX XX'}
+];
+const SERVICES=[
+ {id:'cut',name:'Classic Haircut',desc:'Scissor or clipper cut, styled to finish',price:35,min:45},
+ {id:'fade',name:'Skin Fade',desc:'Precision fade with detailed lineup',price:40,min:45},
+ {id:'beard',name:'Beard Trim & Shape',desc:'Shaping, edge-up and hot towel',price:25,min:30},
+ {id:'combo',name:'Haircut + Beard',desc:'Our most popular combination',price:60,min:75},
+ {id:'shave',name:'Hot Towel Shave',desc:'Traditional straight-razor shave',price:30,min:30},
+ {id:'kids',name:'Kids Haircut (under 12)',desc:'Gentle and patient service',price:25,min:30},
+ {id:'mask',name:'Black Mask Treatment',desc:'Deep-cleansing facial add-on',price:20,min:15}
+];
+const BARBERS=[
+ {id:'b1',name:'Giorgi',loc:'vake',role:'Senior barber',spec:'Fades & classic cuts',open:10,close:21},
+ {id:'b2',name:'Nika',loc:'vake',role:'Barber',spec:'Beard design',open:10,close:21},
+ {id:'b3',name:'Levan',loc:'saburtalo',role:'Master barber',spec:'Skin fades',open:10,close:21},
+ {id:'b4',name:'Dato',loc:'saburtalo',role:'Barber',spec:'Hot towel shaves',open:10,close:21},
+ {id:'b5',name:'Saba',loc:'old',role:'Senior barber',spec:'Scissor cuts',open:11,close:22},
+ {id:'b6',name:'Luka',loc:'old',role:'Barber',spec:'Haircut + beard',open:11,close:22}
+];
+const $=id=>document.getElementById(id);
+const S={loc:null,svc:null,barber:null,date:null,time:null};
+const DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const L=id=>LOCS.find(x=>x.id===id),SV=id=>SERVICES.find(x=>x.id===id),BB=id=>BARBERS.find(x=>x.id===id);
+const ds=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const pretty=s=>{const d=new Date(s+'T12:00');return DN[d.getDay()]+', '+d.getDate()+' '+MN[d.getMonth()]};
+function hash(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0)}
+
+// stored bookings (demo only, per-browser)
+function getBk(){try{return JSON.parse(localStorage.getItem('mb_demo')||'[]')}catch(e){return []}}
+function setBk(a){try{localStorage.setItem('mb_demo',JSON.stringify(a))}catch(e){}}
+let memBk=[];
+function allBk(){const s=getBk();return s.length?s:memBk}
+
+// static sections
+$('locGrid').innerHTML=LOCS.map(l=>`<div class="card loc"><h3>${l.name}</h3><p>📍 ${l.addr}</p><p class="hrs">🕒 ${l.hours}</p><p>📞 ${l.phone}</p><button class="btn ghost" onclick="pickLoc('${l.id}',true)">Book here</button></div>`).join('');
+$('priceList').innerHTML=SERVICES.map(s=>`<div class="price"><div><div class="n">${s.name}</div><div class="d">${s.desc} · ${s.min} min</div></div><div class="dots"></div><div class="p">${s.price} ₾</div><button onclick="pickSvcFromMenu('${s.id}')">Book</button></div>`).join('');
+$('barberGrid').innerHTML=BARBERS.map(b=>`<div class="card barber"><div class="avatar">${b.name[0]}</div><h3>${b.name}</h3><p>${b.role}</p><p>${b.spec}</p><span class="tag">${L(b.loc).name}</span></div>`).join('');
+
+// booking flow
+function unlock(n){for(let i=1;i<=5;i++){const e=$('s'+i);e.classList.toggle('locked',i>n);e.classList.toggle('done',i<n)}}
+function renderLocs(){$('o1').innerHTML=LOCS.map(l=>`<button class="opt ${S.loc===l.id?'sel':''}" onclick="pickLoc('${l.id}')">${l.name}<small>${l.addr.replace('Sample address ','')}</small></button>`).join('')}
+function renderSvcs(){$('o2').innerHTML=SERVICES.map(s=>`<button class="opt ${S.svc===s.id?'sel':''}" onclick="pickSvc('${s.id}')">${s.name}<small>${s.price} ₾ · ${s.min} min</small></button>`).join('')}
+function renderBarbers(){
+  const list=BARBERS.filter(b=>b.loc===S.loc);
+  $('o3').innerHTML=list.map(b=>`<button class="opt ${S.barber===b.id?'sel':''}" onclick="pickBarber('${b.id}')">${b.name}<small>${b.spec}</small></button>`).join('')
+}
+function renderDays(){
+  const out=[];const now=new Date();
+  for(let i=0;i<14;i++){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);const s=ds(d);
+    out.push(`<button class="opt day ${S.date===s?'sel':''}" onclick="pickDate('${s}')"><small>${i===0?'Today':DN[d.getDay()]}</small><b>${d.getDate()}</b><small>${MN[d.getMonth()]}</small></button>`)}
+  $('days').innerHTML=out.join('')
+}
+function slotList(){
+  const b=BB(S.barber),out=[];
+  const now=new Date(),isToday=S.date===ds(now);
+  const mine=allBk();
+  for(let m=b.open*60;m<b.close*60;m+=30){
+    const t=String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+    let taken=hash(b.id+S.date+t)%100<35; // pseudo-random sample availability
+    if(mine.some(x=>x.barber===b.id&&x.date===S.date&&x.time===t))taken=true;
+    if(isToday&&m<=now.getHours()*60+now.getMinutes()+30)taken=true;
+    out.push({t,taken});
+  }
+  return out;
+}
+function renderSlots(){
+  if(!S.date){$('slots').innerHTML='';return}
+  const list=slotList();
+  const free=list.filter(x=>!x.taken).length;
+  $('slots').innerHTML=free?list.map(x=>`<button class="opt ${S.time===x.t?'sel':''}" ${x.taken?'disabled':''} onclick="pickTime('${x.t}')">${x.t}</button>`).join(''):'<div class="empty" style="grid-column:1/-1">No free times on this day. Try another date.</div>';
+}
+function scrollTo2(id){setTimeout(()=>$(id).scrollIntoView({behavior:'smooth',block:'center'}),80)}
+function pickLoc(id,fromTop){
+  if(S.loc!==id){S.barber=null;S.date=null;S.time=null}
+  S.loc=id;renderLocs();renderBarbers();
+  unlock(S.svc?3:2);
+  if(S.svc&&S.barber){unlock(4)}
+  if(fromTop)document.getElementById('book').scrollIntoView({behavior:'smooth'});
+  else scrollTo2(S.svc?'s3':'s2');
+  refresh();
+}
+function pickSvc(id){S.svc=id;renderSvcs();if(S.loc){renderBarbers();unlock(S.barber?4:3);scrollTo2('s3')}else{unlock(1)}refresh()}
+function pickSvcFromMenu(id){S.svc=id;renderSvcs();document.getElementById('book').scrollIntoView({behavior:'smooth'});unlock(S.loc?3:1);if(S.loc)renderBarbers();refresh()}
+function pickBarber(id){S.barber=id;S.date=null;S.time=null;renderBarbers();renderDays();renderSlots();unlock(4);scrollTo2('s4');refresh()}
+function pickDate(d){S.date=d;S.time=null;renderDays();renderSlots();refresh();scrollTo2('slots')}
+function pickTime(t){S.time=t;renderSlots();unlock(5);refresh();scrollTo2('s5')}
+function refresh(){
+  const ok=S.loc&&S.svc&&S.barber&&S.date&&S.time;
+  const sm=$('summary');
+  if(ok){const s=SV(S.svc),b=BB(S.barber);
+    sm.style.display='block';
+    sm.innerHTML=`${s.name} with ${b.name} · ${L(S.loc).name}<br>${pretty(S.date)} at ${S.time} · <b>${s.price} ₾</b> (pay at the shop)`;
+  }else sm.style.display='none';
+  $('confirm').disabled=!ok;
+}
+$('confirm').onclick=()=>{
+  const name=$('fName').value.trim(),phone=$('fPhone').value.replace(/[\s\-()]/g,'');
+  if(name.length<2){$('err').textContent='Please enter your name.';return}
+  if(!/^(\+?995)?5\d{8}$/.test(phone)){$('err').textContent='Please enter a valid Georgian mobile number (5XX XX XX XX).';return}
+  $('err').textContent='';
+  const s=SV(S.svc),b=BB(S.barber);
+  const bk={id:'MB-'+Math.random().toString(36).slice(2,6).toUpperCase(),loc:S.loc,svc:S.svc,barber:S.barber,date:S.date,time:S.time,name,phone,note:$('fNote').value.trim()};
+  const arr=allBk().concat(bk);memBk=arr;setBk(arr);
+  $('mRef').textContent=bk.id;
+  $('mList').innerHTML=`<li>Service<b>${s.name}</b></li><li>Barber<b>${b.name}</b></li><li>Location<b>${L(S.loc).name}</b></li><li>When<b>${pretty(S.date)}, ${S.time}</b></li><li>Price<b>${s.price} ₾</b></li>`;
+  $('modal').classList.add('on');
+  S.date=null;S.time=null;S.barber=null;
+  $('fNote').value='';
+  renderBarbers();renderDays();renderSlots();unlock(3);refresh();renderMine();
+};
+function closeModal(){$('modal').classList.remove('on');document.getElementById('book').scrollIntoView({behavior:'smooth'})}
+function cancelBk(id){const a=allBk().filter(x=>x.id!==id);memBk=a;setBk(a);renderMine();renderSlots()}
+function renderMine(){
+  const a=allBk();
+  $('mine').innerHTML=a.length?`<h3>Your reservations (this device)</h3>`+a.map(x=>`<div class="bk"><div><b>${SV(x.svc).name}</b> · ${BB(x.barber).name}<small>${L(x.loc).name} · ${pretty(x.date)}, ${x.time} · ${x.id}</small></div><button onclick="cancelBk('${x.id}')">Cancel</button></div>`).join(''):''
+}
+renderLocs();renderSvcs();renderMine();
+</script>
+
+</body></html>
